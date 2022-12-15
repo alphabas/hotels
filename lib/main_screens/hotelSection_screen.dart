@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/main_screens/variableConst.dart';
 
 class HotelSection extends StatelessWidget {
   const HotelSection({super.key});
@@ -11,8 +13,40 @@ class HotelSection extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            color: Colors.red,
+            // color: Colors.transparent,
             height: 50.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '550 Hotels founds',
+                  style: GoogleFonts.nunito(color: Colors.black, fontSize: 15),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Filters',
+                      style:
+                          GoogleFonts.nunito(color: Colors.black, fontSize: 15),
+                    ),
+                    IconButton(
+                        onPressed: () => {},
+                        icon: Icon(
+                          Icons.filter_list_outlined,
+                          color: d_green,
+                          size: 25,
+                        ))
+                  ],
+                )
+              ],
+            ),
+          ),
+          Column(
+            children: hotelList.map((current) {
+              return Container(child: Image.asset(current['picture'])
+                  // Text(hotel['title']),
+                  );
+            }).toList(),
           )
         ],
       ),
