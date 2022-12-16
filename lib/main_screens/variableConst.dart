@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 const d_green = Color(0xFF54D3C3);
+final kNow = DateTime.now();
+final kFirstDay = DateTime(kNow as int, kNow.month - 3, kNow.day);
+final kLastDay = DateTime(kNow.year, kNow.month + 3, kNow.day);
+
 final List hotelList = [
   {
     'title': 'Grand royal Hotel',

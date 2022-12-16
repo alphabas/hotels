@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/main_screens/hotelCard_screen.dart';
 import 'package:hotels/main_screens/variableConst.dart';
 
 class HotelSection extends StatelessWidget {
@@ -19,7 +20,7 @@ class HotelSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '550 Hotels founds',
+                  '350 Hotels founds',
                   style: GoogleFonts.nunito(color: Colors.black, fontSize: 15),
                 ),
                 Row(
@@ -43,9 +44,7 @@ class HotelSection extends StatelessWidget {
           ),
           Column(
             children: hotelList.map((current) {
-              return Container(child: Image.asset(current['picture'])
-                  // Text(hotel['title']),
-                  );
+              return HotelCard(current);
             }).toList(),
           )
         ],
