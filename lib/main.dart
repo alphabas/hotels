@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/login_screens/loginComponent.dart';
 import 'package:hotels/main_screens/home_creens.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hotel Booking',
-      home: HomeScreens(),
+      home: LoginScreen(),
+      // home: HomeScreens(),
     );
   }
 }
