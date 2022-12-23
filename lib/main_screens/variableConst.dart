@@ -40,3 +40,6 @@ final List hotelList = [
     'price': '18'
   }
 ];
+
+const descLogin = 'Enter your credential to login';
+const titleLogin = 'Welcome Back';

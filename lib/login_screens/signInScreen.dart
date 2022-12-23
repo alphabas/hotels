@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/main_screens/variableConst.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -51,7 +52,7 @@ class LoginScreen extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Welcome Back',
+          titleLogin,
           style: GoogleFonts.nunito(
             color: Colors.black,
             fontSize: 40.0,
@@ -59,7 +60,7 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
         Text(
-          'Enter your credential to login',
+          descLogin,
           style: GoogleFonts.nunito(
             color: Colors.black,
             fontSize: 16.0,
@@ -76,14 +77,16 @@ class LoginScreen extends StatelessWidget {
       children: [
         TextField(
           decoration: InputDecoration(
-              hintText: 'Username.',
-              // contentPadding: EdgeInsets.all(5.0),
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                  borderSide: BorderSide.none),
-              fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
-              filled: true,
-              prefix: Icon(Icons.person)),
+            hintText: 'Username.',
+            // contentPadding: EdgeInsets.all(5.0),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(18.0),
+              borderSide: BorderSide.none,
+            ),
+            fillColor: Theme.of(context).primaryColor.withOpacity(0.1),
+            filled: true,
+            prefix: Icon(Icons.person),
+          ),
         ),
         SizedBox(height: 10.0),
         TextField(
