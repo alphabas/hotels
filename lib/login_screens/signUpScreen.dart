@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/login_screens/signInScreen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -102,7 +103,16 @@ class RegisterScreen extends StatelessWidget {
         ),
         SizedBox(height: 10.0),
         ElevatedButton(
-          onPressed: () => {},
+          onPressed: () => {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return LoginScreen();
+                },
+              ),
+            ),
+          },
           child: Text(
             'REGISTER',
             style: GoogleFonts.nunito(

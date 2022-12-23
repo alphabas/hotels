@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/login_screens/signUpScreen.dart';
+import 'package:hotels/main.dart';
+import 'package:hotels/main_screens/home_creens.dart';
 import 'package:hotels/main_screens/variableConst.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -32,7 +35,16 @@ class LoginScreen extends StatelessWidget {
               color: Colors.white,
               size: 20.0,
             ),
-            onPressed: () => {},
+            onPressed: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return RegisterScreen();
+                  },
+                ),
+              ),
+            },
           ),
           title: Text(
             'Login',
@@ -103,7 +115,11 @@ class LoginScreen extends StatelessWidget {
         ),
         SizedBox(height: 10.0),
         ElevatedButton(
-          onPressed: () => {},
+          onPressed: () => {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return HomeScreens();
+            }))
+          },
           child: Text(
             'LOGIN',
             style: GoogleFonts.nunito(
@@ -128,7 +144,18 @@ class LoginScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text('Dont have an account ?'),
-        TextButton(onPressed: () => {}, child: Text('Sign Up'))
+        TextButton(
+            onPressed: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return RegisterScreen();
+                      },
+                    ),
+                  ),
+                },
+            child: Text('Sign Up'))
       ],
     );
   }
